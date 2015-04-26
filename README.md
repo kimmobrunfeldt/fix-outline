@@ -6,7 +6,7 @@ By default, browsers add an outline around your shiny buttons when they are focu
 
 ![](docs/outline.gif)
 
-This is great for [keyboard accessibility](http://webaim.org/techniques/keyboard/), but most users don't use keyboard for navigating. Usually developers fix this by [setting a global](http://stackoverflow.com/questions/3397113/how-to-remove-border-outline-around-text-input-boxes-chrome) `*:focus: { outline: none; }` rule, but **[they shouldn't](http://outlinenone.com/)**.
+This is great for [keyboard accessibility](http://webaim.org/techniques/keyboard/), but most users don't use keyboard for navigating. The goal of this library is to provide **best visual experience for most users**, while keeping good keyboard accessibility.
 
 `fix-outline` disables outline until user actually uses keyboard navigation. **It works out of the box with your existing CSS.**
 
@@ -64,7 +64,7 @@ body:not(.kb-nav-used) *:focus {
 This is shortly how `fix-outline` works:
 
 * Add new CSS rule which disables outline on elements when .kb-nav-used is not defined for body
-* Setup hook, which adds *.kb-nav-used* class to *<body>* when TAB key is pressed
+* Setup hook, which adds **.kb-nav-used** class to **body** when TAB key is pressed
 
 In other words, outline for elements is enabled
 after user uses keyboard navigation for the first time.
@@ -73,6 +73,8 @@ Reasoning behind the implementation:
 
 * Enables accessibility only for the ones using it.
 * Fast. Does CSS stylesheet modifications only once and removes event listener. [Other implementations](https://github.com/lindsayevans/outline.js/blob/master/outline.js) keep listening for all `mousedown` and `keydown` events.
+
+Usually developers fix this by [setting a global](http://stackoverflow.com/questions/3397113/how-to-remove-border-outline-around-text-input-boxes-chrome) `*:focus { outline: none; }` rule, but **[they shouldn't](http://outlinenone.com/)**.
 
 ## Resources and other implementations
 
