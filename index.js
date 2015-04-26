@@ -18,14 +18,31 @@ function fixOutline(opts) {
             addFocusRule();
         }
 
-        window.addEventListener('keyup', keyUp, false);
+        addListener('keyup', keyUp, false);
     }
 
     function keyUp(event) {
         if (event.keyCode === KEY_CODE_TAB) {
             addClass(document.querySelector('body'), 'kb-nav-used');
 
-            window.removeEventListener('keyup', keyUp, false);
+            removeListener(window, 'keyup', keyUp);
+        }
+    }
+
+    // To support <IE9, use attachEvent and detachEvent.
+    function addListener(element, event, listener) {
+        if (element.attachEvent) {
+            return element.attachEvent('on' + event, listener);
+        } else {
+            return element.addEventListener(event, listener, false);
+        }
+    }
+
+    function removeListener(element, event, listener) {
+        if (element.detachEvent) {
+            return element.detachEvent('on' + event, listener);
+        } else {
+            return element.removeEventListener(event, listener, false);
         }
     }
 
