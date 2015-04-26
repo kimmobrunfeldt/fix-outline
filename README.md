@@ -1,7 +1,7 @@
 # fix-outline
 > ```*:focus { outline: none; }``` done right.
 
-By default, some browsers(<img src="docs/chrome.png" class="inline"/>) add an outline around your shiny buttons when they are clicked:
+By default, some browsers(<img src="docs/chrome.png" style="margin-bottom: -2px;" class="inline"/>) add an outline around your shiny buttons when they are clicked:
 
 ![](docs/outline.gif)
 
