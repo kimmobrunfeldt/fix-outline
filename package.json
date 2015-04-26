@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/kimmobrunfeldt/fix-outline",
   "devDependencies": {
+    "bluebird": "^2.9.24",
     "commander": "^2.8.1",
     "mustache": "^2.0.0",
     "semver": "^4.3.3",
