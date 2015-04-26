@@ -1,5 +1,4 @@
 # fix-outline
-
 > ```*:focus { outline: none; }``` done right.
 
 By default, browsers add an outline around your shiny buttons when they are focused:
@@ -13,6 +12,9 @@ This is great for [keyboard accessibility](http://webaim.org/techniques/keyboard
 This very small library has no dependencies and supports all modern browsers, including IE8+.
 
 ## Install
+
+[![NPM](https://nodei.co/npm/fix-outline.png?compact=true)](https://nodei.co/npm/fix-outline/)
+
 
 ```bash
 npm install fix-outline
