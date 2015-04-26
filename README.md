@@ -1,12 +1,11 @@
 # Fix outline
 
-```*:focus { outline: none }``` done right. Works out of the box with your existing CSS. Actives `outline` only after user actually uses keyboard
-navigation. Read more about [the pragmatic approach](#how-it-works).
-
+```*:focus { outline: none }``` done right. Works out of the box with your existing CSS. Disables `outline` until user actually
+[uses keyboard](#how-it-works) navigation.
 You get keyboard accessibility while having visually appealing page for
 most users.
 
-Has no dependencies and supports all modern browsers, including IE8+.
+`fix-outline` has no dependencies and supports all modern browsers, including IE8+.
 
 ## Install
 
@@ -24,7 +23,7 @@ npm install fix-outline
 }
 ```
 
-After that, just call `fixOutline()`:
+After that, just call `fixOutline()` once in your JS:
 
 ```javascript
 var fixOutline = require('fix-outline');
@@ -34,7 +33,7 @@ fixOutline();
 ### Advanced usage
 
 `fixOutline()` automatically adds new CSS rules to your page.
-You can take full control of your CSS by setting `autoCSS` option
+You can disable this behavior by setting `autoCSS` option
 to `false`:
 
 ```javascript
@@ -45,7 +44,7 @@ fixOutline({
 ```
 
 That means you need to add some CSS yourself. For example this rule is added
-when `autoCss` is `true`:
+when `autoCss` is enabled:
 
 ```css
 body:not(.kb-nav-used) *:focus {
@@ -55,8 +54,10 @@ body:not(.kb-nav-used) *:focus {
 
 ## How it works
 
-* Adds .kb-nav-used to body when TAB key is pressed
-* Adds new CSS rule which disables outline on elements when .kb-nav-used is not defined for body
+This is shortly how `fix-outline` works:
+
+* Add new CSS rule which disables outline on elements when .kb-nav-used is not defined for body
+* Setup hook, which adds *.kb-nav-used* class to *<body>* when TAB key is pressed
 
 In other words, outline for elements is enabled
 after user uses keyboard navigation for the first time.
