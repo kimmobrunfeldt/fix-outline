@@ -1,13 +1,16 @@
-# Fix outline
+# fix-outline
 
-> ```*:focus { outline: none }``` done right.
+> ```*:focus { outline: none; }``` done right.
 
-Works out of the box with your existing CSS. Disables `outline` until user actually
-[uses keyboard](#how-it-works) navigation.
-You get keyboard accessibility while having visually appealing page for
-most users.
+By default, browsers add an outline around your shiny buttons when they are focused:
 
-`fix-outline` has no dependencies and supports all modern browsers, including IE8+.
+![](docs/outline.gif)
+
+This is great for [keyboard accessibility](http://webaim.org/techniques/keyboard/), but most users don't use keyboard for navigating. Usually developers fix this by [setting a global](http://stackoverflow.com/questions/3397113/how-to-remove-border-outline-around-text-input-boxes-chrome) `*:focus: { outline: none; }` rule, but **[they shouldn't](http://outlinenone.com/)**.
+
+`fix-outline` disables outline until user actually uses keyboard navigation. **It works out of the box with your existing CSS.**
+
+This very small library has no dependencies and supports all modern browsers, including IE8+.
 
 ## Install
 
@@ -25,12 +28,14 @@ npm install fix-outline
 }
 ```
 
-After that, just call `fixOutline()` once in your JS:
+Then call `fixOutline()` once in your JS:
 
 ```javascript
 var fixOutline = require('fix-outline');
 fixOutline();
 ```
+
+Now `outline` is disabled for all focused elements until keyboard navigation is used for the first time.
 
 ### Advanced usage
 
