@@ -18,7 +18,7 @@ function fixOutline(opts) {
             addFocusRule();
         }
 
-        addListener('keyup', keyUp, false);
+        addListener(window, 'keyup', keyUp);
     }
 
     function keyUp(event) {
