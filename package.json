@@ -1,36 +1,36 @@
 {
-  "name": "fix-outline",
-  "version": "0.0.1",
-  "description": "`*:focus { outline: none }` done right",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/kimmobrunfeldt/fix-outline.git"
-  },
-  "keywords": [
-    "outline",
-    "none",
-    "css",
-    "keyboard",
-    "accessibility",
-    "shortcut",
-    "navigatio"
-  ],
-  "author": "Kimmo Brunfeldt <kimmobrunfeldt@gmail.com> (http://kimmobrunfeldt.github.io/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kimmobrunfeldt/fix-outline/issues"
-  },
-  "homepage": "https://github.com/kimmobrunfeldt/fix-outline",
-  "devDependencies": {
-    "bluebird": "^2.9.24",
-    "commander": "^2.8.1",
-    "mustache": "^2.0.0",
-    "semver": "^4.3.3",
-    "shelljs": "^0.4.0",
-    "string": "^3.1.1"
-  }
+    "name": "fix-outline",
+    "version": "0.1.0",
+    "description": "`*:focus { outline: none }` done right",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/kimmobrunfeldt/fix-outline.git"
+    },
+    "keywords": [
+        "outline",
+        "none",
+        "css",
+        "keyboard",
+        "accessibility",
+        "shortcut",
+        "navigatio"
+    ],
+    "author": "Kimmo Brunfeldt <kimmobrunfeldt@gmail.com> (http://kimmobrunfeldt.github.io/)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kimmobrunfeldt/fix-outline/issues"
+    },
+    "homepage": "https://github.com/kimmobrunfeldt/fix-outline",
+    "devDependencies": {
+        "bluebird": "^2.9.24",
+        "commander": "^2.8.1",
+        "mustache": "^2.0.0",
+        "semver": "^4.3.3",
+        "shelljs": "^0.4.0",
+        "string": "^3.1.1"
+    }
 }
