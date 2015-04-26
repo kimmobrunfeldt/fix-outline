@@ -1,7 +1,7 @@
 # fix-outline
 > ```*:focus { outline: none; }``` done right.
 
-By default, browsers add an outline around your shiny buttons when they are focused:
+By default, some browsers(![](docs/chrome.png)) add an outline around your shiny buttons when they are clicked:
 
 ![](docs/outline.gif)
 
@@ -10,6 +10,8 @@ This is great for [keyboard accessibility](http://webaim.org/techniques/keyboard
 `fix-outline` disables outline until user actually uses keyboard navigation. **It works out of the box with your existing CSS.**
 
 This very small library has no dependencies and supports all modern browsers, including IE8+.
+
+**Note:** *Chromium's behavior to outline buttons on click [is intentional](https://code.google.com/p/chromium/issues/detail?id=305356). To my mind, this library is a good compromise between visual look and accessibility.*
 
 ## Install
 
