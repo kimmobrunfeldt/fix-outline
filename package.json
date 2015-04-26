@@ -1,0 +1,28 @@
+{
+  "name": "fix-outline-demo",
+  "version": "0.0.0",
+  "description": "Fix outline demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve & npm run watch-js",
+    "watch-js": "watchify -o bundle.js main.js -d -v",
+    "serve": "static -a 0.0.0.0 -c 0 ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kimmobrunfeldt/fix-outline.git"
+  },
+  "author": "Kimmo Brunfeldt <kimmobrunfeldt@gmail.com> (http://kimmobrunfeldt.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimmobrunfeldt/fix-outline/issues"
+  },
+  "homepage": "https://github.com/kimmobrunfeldt/fix-outline",
+  "dependencies": {
+    "fix-outline": "git://github.com/kimmobrunfeldt/fix-outline"
+  },
+  "devDependencies": {
+    "node-static": "^0.7.6",
+    "watchify": "^3.1.2"
+  }
+}
