@@ -1,6 +1,8 @@
 # Fix outline
 
-```*:focus { outline: none }``` done right. Works out of the box with your existing CSS. Disables `outline` until user actually
+> ```*:focus { outline: none }``` done right.
+
+Works out of the box with your existing CSS. Disables `outline` until user actually
 [uses keyboard](#how-it-works) navigation.
 You get keyboard accessibility while having visually appealing page for
 most users.
