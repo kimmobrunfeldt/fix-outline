@@ -3,6 +3,11 @@ html, body {
   color: #333;
 }
 
+p {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
 .button {
   margin: 40px;
   box-sizing: border-box;

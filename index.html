@@ -13,16 +13,23 @@
 
     <h1>Demo</h1>
 
+    <p>By default, browsers add an outline around your shiny buttons when they are focused. This is great for <a tabindex="1" href="http://webaim.org/techniques/keyboard/">keyboard accessibility</a>, but most users don't use keyboard for navigating. The goal of this library is to provide <b>best visual experience for most users</b>, while keeping good keyboard accessibility.
+    </p>
+
+    <p><b>fix-outline</b> disables outline until user actually uses keyboard navigation. <b>It works out of the box with your existing CSS.</b>
+    </p>
+
+    <h2>Test it</h2>
     <ol>
       <li>Try to click a button. There's no outline.</li>
       <li>Press tab key to navigate between buttons. Outline becomes enabled.</li>
     </ol>
 
-    <button tabindex="1" class="button">Button A</button>
-    <button tabindex="2" class="button">Button B</button>
-    <button tabindex="3" class="button">Button C</button>
+    <button tabindex="2" class="button">Button A</button>
+    <button tabindex="3" class="button">Button B</button>
+    <button tabindex="4" class="button">Button C</button>
 
-    <p>You can try this same demo page <a href="without-fix-outline.html">without fix-outline</a>.
+    <p>You can try this same demo page <a tabindex="5" href="without-fix-outline.html">without fix-outline</a>.
 
     <script src="bundle.js"></script>
   </body>
