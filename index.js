@@ -55,7 +55,7 @@ function fixOutline(opts) {
         // Use existing sheet or create new one
         var sheet = sheets.length < 0
                   ? createStyleSheet()
-                  // filters out styleCheets who don't have cssRules
+                  // filters out styleSheets that don't have cssRules
                   : sheets[Object.keys(sheets).filter(function (val) {
                     return sheets[val].cssRules;
                   }).pop()];
