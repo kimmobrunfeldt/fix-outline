@@ -53,8 +53,12 @@ function fixOutline(opts) {
     function addFocusRule() {
         var sheets = document.styleSheets;
         // Use existing sheet or create new one
-        var sheet = sheets.length > 0 ? sheets[0] : createStyleSheet();
-
+        var sheet = sheets.length < 0
+                  ? createStyleSheet()
+                  // filters out styleSheets that don't have cssRules
+                  : sheets[Object.keys(sheets).filter(function (val) {
+                    return sheets[val].cssRules;
+                  }).pop()];
         // Disable element outline on focus if
         // user has _not_ used keyboard navigation
         var rule = 'body:not(.kb-nav-used) *:focus {' +
