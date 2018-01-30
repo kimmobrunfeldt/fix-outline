@@ -57,7 +57,14 @@ function fixOutline(opts) {
                   ? createStyleSheet()
                   // filters out styleSheets that don't have cssRules
                   : sheets[Object.keys(sheets).filter(function (val) {
-                    return sheets[val].cssRules;
+                      try {
+                          return sheets[val].cssRules;
+                      } catch(error) {
+                          if(error.name !== 'SecurityError') {
+                              throw error;
+                          }
+                          return false;
+                      }
                   }).pop()];
         // Disable element outline on focus if
         // user has _not_ used keyboard navigation
